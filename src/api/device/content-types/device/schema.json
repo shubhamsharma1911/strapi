@@ -1,0 +1,45 @@
+{
+  "kind": "collectionType",
+  "collectionName": "devices",
+  "info": {
+    "singularName": "device",
+    "pluralName": "devices",
+    "displayName": "Device",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "KeyTab",
+        "KeyStone"
+      ]
+    },
+    "DeviceID": {
+      "type": "uid"
+    },
+    "Model": {
+      "type": "string"
+    },
+    "Size": {
+      "type": "string"
+    },
+    "Manufacturer": {
+      "type": "string"
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "approved",
+        "removed",
+        "blocked",
+        "pending",
+        "active"
+      ]
+    }
+  }
+}

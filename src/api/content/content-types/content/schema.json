@@ -1,0 +1,56 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contents",
+  "info": {
+    "singularName": "content",
+    "pluralName": "contents",
+    "displayName": "Content",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Description": {
+      "type": "text"
+    },
+    "Status": {
+      "type": "enumeration",
+      "enum": [
+        "approved",
+        "removed",
+        "blocked",
+        "pending",
+        "active"
+      ]
+    },
+    "Parent": {
+      "type": "biginteger"
+    },
+    "Type": {
+      "type": "enumeration",
+      "enum": [
+        "ebook",
+        "game",
+        "video",
+        "audio"
+      ]
+    },
+    "Related": {
+      "type": "string"
+    },
+    "Prerequisite": {
+      "type": "string"
+    },
+    "content_files": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::content-file.content-file",
+      "mappedBy": "content"
+    }
+  }
+}
